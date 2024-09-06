@@ -7,7 +7,6 @@ import {Address} from "@openzeppelin/contracts/utils/Address.sol";
 import {Create3Factory} from "../src/mixins/Create3Factory.sol";
 import {Toolkit, getToolkit, ChainId} from "utils/Toolkit.sol";
 import {Deployer, DeployerDeployment} from "./Deployment.sol";
-import {BlastMock} from "./mocks/BlastMock.sol";
 
 abstract contract BaseScript is Script {
     Toolkit internal toolkit = getToolkit();
