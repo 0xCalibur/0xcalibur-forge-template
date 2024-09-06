@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity >=0.8.0;
+
+{{#if operatable}}
+import {OwnableOperators} from "/mixins/OwnableOperators.sol";
+{{/if}}
+
+contract {{contractName}}{{#if operatable}} is OwnableOperators{{/if}} {
+    {{#if operatable}}
+    constructor(address _owner) {
+        _initializeOwner(_owner);
+    }
+    {{/if}}
+}

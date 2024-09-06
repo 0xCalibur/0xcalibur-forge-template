@@ -1,0 +1,49 @@
+{
+  "name": "0xcalibur-forge-template",
+  "license": "MIT",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "postinstall": "git update-index --assume-unchanged playground/* && forge soldeer install",
+    "typecheck": "bun run tsc --noEmit",
+    "build": "forge build",
+    "task": "bun run tooling/task-runner.ts",
+    "clean": "forge clean",
+    "test": "env $(echo $(cat .env.defaults && echo && cat .env) | xargs) forge test",
+    "gen": "bun task gen",
+    "coverage": "forge coverage --ir-minimum",
+    "remappings": "forge remappings > remappings.txt",
+    "playground": "env $(echo $(cat .env.defaults && echo && cat .env) | xargs) FOUNDRY_TEST=playground forge test --match-path playground/Playground.t.sol --match-contract Playground",
+    "deploy": "forge clean && bun task forge-deploy --broadcast --verify",
+    "deploy:multichain": "forge clean && bun task forge-deploy-multichain --broadcast --verify",
+    "deploy:multichain:no-verify": "forge clean && bun task forge-deploy-multichain --broadcast",
+    "deploy:no-verify": "forge clean && bun task forge-deploy --broadcast",
+    "deploy:simulation": "forge clean && bun task forge-deploy",
+    "deploy:post": "bun run task sync-deployments && bun run task post-deploy",
+    "post-deploy": "bun run deploy:post",
+    "address": "bun run task address",
+    "b": "bun run build",
+    "t": "bun run test",
+    "d": "bun run deploy",
+    "d:no-verify": "bun run deploy:no-verify",
+    "p": "bun run playground"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "camel-to-kebab": "^1.1.2",
+    "chalk": "^5.3.0",
+    "console-table-printer": "^2.12.1",
+    "crypto": "^1.0.1",
+    "dotenv-defaults": "^5.0.2",
+    "ethers": "5.7.0",
+    "handlebars": "^4.7.8",
+    "inquirer": "^10.0.3",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.4.0"
+  }
+}

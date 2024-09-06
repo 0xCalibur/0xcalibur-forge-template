@@ -1,0 +1,53 @@
+# Compiler files
+cache/
+out/
+
+# Ignores development broadcast logs
+!/broadcast
+/broadcast/*
+/broadcast/*/31337/
+
+
+# Added by cargo
+/lib
+/dependencies
+/target
+.env
+.vscode/*.log
+.gas-snapshot
+.DS_Store
+
+.prettierignore
+
+# forge-deploy
+/generated
+/deployments/localhost
+/deployments/31337
+
+# forge-deploy cli binary
+/forge-deploy
+
+# Hardhat
+artifacts/
+cache/
+node_modules/
+.env
+yarn-error.log
+coverage
+coverage.json
+gasReport.txt
+bin
+typechain/
+abi
+cache_hardhat/
+.yarnrc
+.yarn/*
+
+# Fuzz
+crytic-export
+echidna-corpus
+medusa-corpus
+
+src/_fuzzing
+yarn.lock
+archive

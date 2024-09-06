@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "irongeek.vscode-env",
+        "tamasfe.even-better-toml",
+        "nomicfoundation.hardhat-solidity",
+        "esbenp.prettier-vscode"
+    ]
+}

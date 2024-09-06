@@ -1,0 +1,23 @@
+[[dependencies]]
+name = "forge-std"
+version = "1.9.2"
+source = "https://github.com/foundry-rs/forge-std.git"
+checksum = "58d30519826c313ce47345abedfdc07679e944d1"
+
+[[dependencies]]
+name = "openzeppelin-contracts"
+version = "5.0.2"
+source = "https://github.com/OpenZeppelin/openzeppelin-contracts.git"
+checksum = "dbb6104ce834628e473d2173bbc9d47f81a9eec3"
+
+[[dependencies]]
+name = "openzeppelin-contracts-upgradeable"
+version = "5.0.2"
+source = "https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable.git"
+checksum = "723f8cab09cdae1aca9ec9cc1cfa040c2d4b06c1"
+
+[[dependencies]]
+name = "solady"
+version = "0.0.231"
+source = "https://github.com/Vectorized/solady.git"
+checksum = "2907b5036b9b3489891e69b49adba24c793940d4"
