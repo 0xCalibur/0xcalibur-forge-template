@@ -12,11 +12,6 @@ abstract contract BaseScript is Script {
     Toolkit internal toolkit = getToolkit();
 
     function run() public virtual returns (DeployerDeployment[] memory newDeployments) {
-        if (!testing() && block.chainid == ChainId.Blast) {
-            vm.etch(address(0x4300000000000000000000000000000000000002), address(new BlastMock()).code);
-            vm.allowCheatcodes(address(0x4300000000000000000000000000000000000002));
-        }
-
         Address.functionDelegateCall(address(this), abi.encodeWithSignature("deploy()"));
         return toolkit.deployer().newDeployments();
     }
