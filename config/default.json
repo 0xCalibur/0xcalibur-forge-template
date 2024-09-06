@@ -1,3 +1,5 @@
 {
-  "addresses": []
+  "addresses": [
+    { "key": "create3Factory", "value": "0x6df7bf308ABaf673f38Db316ECc97b988CE1Ca78" }
+  ]
 }
